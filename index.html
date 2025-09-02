@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of Lease Cleaning Guide - Brisbane</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .intro-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 2rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            font-size: 1.05rem;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .room-card {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid #d1d5db;
+            transition: all 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #ffffff, #f9fafb);
+        }
+
+        .room-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.8rem;
+        }
+
+        .room-card p {
+            font-size: 0.95rem;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        .supplies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .supply-item {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            color: #374151;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .supply-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: scale(1.05);
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .comparison-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid #f59e0b;
+            position: relative;
+        }
+
+        .tip-card::before {
+            content: '💡';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .tip-card h4 {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-card p {
+            color: #b45309;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .mistakes-list {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #f87171;
+            margin: 2rem 0;
+        }
+
+        .mistakes-list h3 {
+            color: #dc2626;
+            margin-bottom: 1rem;
+        }
+
+        .mistakes-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mistakes-list li {
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: #b91c1c;
+            font-weight: 500;
+        }
+
+        .mistakes-list li::before {
+            content: '❌ ';
+            margin-right: 0.5rem;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid #10b981;
+            margin-top: 3rem;
+        }
+
+        .conclusion h2 {
+            color: #065f46;
+            margin-bottom: 1rem;
+        }
+
+        .conclusion p {
+            color: #047857;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #8b5cf6;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero {
+                padding: 2rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>End of Lease Cleaning Guide</h1>
+            <p class="subtitle">Your complete Brisbane bond cleaning checklist</p>
+        </div>
+
+        <div class="intro-card">
+            <p>Moving out of a rental property in Brisbane is always a big task. Between packing, organizing removalists, and finalizing paperwork, cleaning often feels like the hardest part. End of lease cleaning, sometimes called bond cleaning, is more than just a quick tidy up. It's a detailed process that can decide whether you get your full bond back or not.</p>
+            <p>If you are wondering how to prepare for <a href="https://bondcleaningbrisbane.pages.dev/
+">end of lease cleaning in Brisbane</a>, this guide will walk you through everything step by step. You'll learn what to expect, what to focus on, and how to make the entire process easier.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Why End of Lease Cleaning Matters</h2>
+            <p>In Brisbane, landlords and property managers expect tenants to return a rental property in the same condition it was when they first moved in. The Residential Tenancies Authority (RTA) makes it clear that tenants must leave the property clean, undamaged, and ready for the next tenant.</p>
+            <div class="highlight">
+                <p><strong>Important:</strong> If the cleaning doesn't meet the inspection standards, part of your bond deposit can be withheld to cover professional cleaning costs.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 1: Check Your Lease and Entry Report</h2>
+            <p>Before picking up a broom, go through your lease agreement and the entry condition report you filled out when moving in.</p>
+            <div class="comparison-table">
+                <div class="comparison-card">
+                    <h4>📋 Lease Agreement</h4>
+                    <p>Some leases require professional carpet cleaning or pest control (for example, if you had pets).</p>
+                </div>
+                <div class="comparison-card">
+                    <h4>📝 Entry Report</h4>
+                    <p>This document shows the condition of the property when you moved in. Use it as a guide to restore the property to the same level of cleanliness.</p>
+                </div>
+            </div>
+            <p>This step gives you a clear picture of what's expected and helps avoid unnecessary disputes.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 2: Create a Cleaning Plan</h2>
+            <p>End of lease cleaning can feel overwhelming if you jump in without a plan. A checklist makes the process easier and ensures you don't miss anything.</p>
+            
+            <h3>Break it down by rooms:</h3>
+            <div class="room-grid">
+                <div class="room-card">
+                    <h4>🍳 Kitchen</h4>
+                    <p>Oven, stovetop, cupboards, sink, rangehood, splashback</p>
+                </div>
+                <div class="room-card">
+                    <h4>🚿 Bathroom</h4>
+                    <p>Toilet, shower, bath, mirrors, tiles, exhaust fan</p>
+                </div>
+                <div class="room-card">
+                    <h4>🛏️ Living Areas & Bedrooms</h4>
+                    <p>Carpets, walls, windows, blinds, wardrobes</p>
+                </div>
+                <div class="room-card">
+                    <h4>🌿 Outdoor Areas</h4>
+                    <p>Garage, balcony, garden, bins</p>
+                </div>
+            </div>
+            <p>Write everything down and tick it off as you go.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 3: Gather the Right Supplies</h2>
+            <p>Bond cleaning needs more than just soap and water. Having the right tools saves time and makes the job less stressful.</p>
+            
+            <div class="supplies-grid">
+                <div class="supply-item">🧽 Multi-purpose cleaner</div>
+                <div class="supply-item">🔥 Oven cleaner</div>
+                <div class="supply-item">🪟 Glass & window spray</div>
+                <div class="supply-item">🧹 Mop & vacuum</div>
+                <div class="supply-item">🧤 Scrubbing brushes</div>
+                <div class="supply-item">🧽 Microfiber cloths</div>
+                <div class="supply-item">🪣 Bucket & sponges</div>
+                <div class="supply-item">🏠 Carpet stain remover</div>
+            </div>
+            <p>Having everything ready before you start helps you move smoothly from one task to another.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 4: Declutter Before You Clean</h2>
+            <p>Cleaning around boxes and old furniture is frustrating. Before you start, remove all personal belongings from the property. This makes cleaning easier and allows you to see every spot that needs attention.</p>
+            <p>It also gives you a chance to notice damages or stains that may need extra care.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 5: Clean the Kitchen Thoroughly</h2>
+            <p>The kitchen is one of the most important areas during inspection because grease and grime build up quickly. Here's what to focus on:</p>
+            
+            <div class="room-grid">
+                <div class="room-card">
+                    <h4>🔥 Oven</h4>
+                    <p>Spray oven cleaner and let it soak before scrubbing. Don't forget oven trays and racks.</p>
+                </div>
+                <div class="room-card">
+                    <h4>🍳 Stovetop</h4>
+                    <p>Clean burners, knobs, and any removable parts.</p>
+                </div>
+                <div class="room-card">
+                    <h4>🚪 Cupboards</h4>
+                    <p>Wipe inside and outside. Remove old food crumbs, grease, and dust.</p>
+                </div>
+                <div class="room-card">
+                    <h4>🚰 Sink & Taps</h4>
+                    <p>Scrub until shiny. Remove any limescale or stains.</p>
+                </div>
+                <div class="room-card">
+                    <h4>💨 Rangehood</h4>
+                    <p>Clean filters and wipe surfaces.</p>
+                </div>
+                <div class="room-card">
+                    <h4>✨ Splashback</h4>
+                    <p>Degrease and polish until it looks new.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 6: Deep Clean the Bathroom</h2>
+            <p>Bathrooms often collect mould and soap scum, so pay special attention here.</p>
+            
+            <div class="room-grid">
+                <div class="room-card">
+                    <h4>🚿 Shower & Bath</h4>
+                    <p>Scrub tiles, glass, and grout. Remove all mould and stains.</p>
+                </div>
+                <div class="room-card">
+                    <h4>🚽 Toilet</h4>
+                    <p>Clean the bowl, seat, base, and behind the toilet.</p>
+                </div>
+                <div class="room-card">
+                    <h4>🪞 Mirrors</h4>
+                    <p>Use glass cleaner for a streak-free finish.</p>
+                </div>
+                <div class="room-card">
+                    <h4>💨 Exhaust Fan</h4>
+                    <p>Dust and clean to ensure it works properly.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 7: Tackle the Bedrooms and Living Areas</h2>
+            <p>Even if these rooms look tidy, they need a deeper clean for bond return.</p>
+            <p><strong>Carpets:</strong> Vacuum thoroughly. If your lease requires steam cleaning, book a professional service.</p>
+            <p><strong>Walls:</strong> Check for marks and gently clean them with a damp cloth or magic eraser.</p>
+            <p><strong>Windows:</strong> Clean both inside and outside. Don't forget the tracks and sills.</p>
+            <p><strong>Wardrobes and Shelves:</strong> Wipe down surfaces, doors, and handles.</p>
+            <p><strong>Blinds and Curtains:</strong> Dust or wash them depending on the material.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 8: Clean Outdoor Spaces</h2>
+            <p>Outdoor areas can make a big impression during the final inspection.</p>
+            <p><strong>Balcony or Patio:</strong> Sweep, mop, and remove any stains.</p>
+            <p><strong>Garage:</strong> Remove oil stains and cobwebs.</p>
+            <p><strong>Garden:</strong> Mow the lawn, trim bushes, and clear rubbish.</p>
+            <p><strong>Bins:</strong> Wash and disinfect to remove bad odours.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 9: Do a Final Check</h2>
+            <p>Once you've cleaned everything, take a slow walk through the property. Pretend you are the property manager doing the inspection. Check corners, behind doors, and inside cupboards. Small details like light switches, skirting boards, and ceiling fans are easy to miss but often inspected closely.</p>
+            <p>Compare everything with the entry condition report. If it looks equal or better, you're ready for inspection.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Step 10: DIY vs Professional Cleaners</h2>
+            <p>Some tenants prefer to do bond cleaning themselves to save money. Others hire professional cleaners to ensure the job is done to a high standard.</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-card">
+                    <h4>🔨 DIY Cleaning</h4>
+                    <p>• Cheaper but time consuming</p>
+                    <p>• Good option for small properties or if you enjoy cleaning</p>
+                    <p>• Requires the right tools and products</p>
+                </div>
+                <div class="comparison-card">
+                    <h4>👨‍💼 Professional Cleaning</h4>
+                    <p>• More expensive but saves time and stress</p>
+                    <p>• Most companies in Brisbane offer a bond back guarantee</p>
+                    <p>• Ideal if your lease requires steam carpet cleaning or pest control</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-section"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453477.6536737166!2d152.99319645!3d-27.3821429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7e118c118e2610b%3A0xf89b29525cbc3f98!2sBond%20Cleaning%20Service!5e0!3m2!1sen!2sin!4v1756789809857!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+        <div class="content-section">
+            <h2>Simple Tricks to Make Bond Cleaning Easier</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>Start Early</h4>
+                    <p>Begin cleaning a few days before moving out instead of rushing on the last day.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Work Top to Bottom</h4>
+                    <p>Dust fans and shelves first, then clean floors.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Soak While You Clean</h4>
+                    <p>Put oven racks or rangehood filters in a soaking solution while you work on other rooms.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Use Natural Cleaners</h4>
+                    <p>Baking soda, vinegar, and lemon juice are affordable and safe.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Get Help</h4>
+                    <p>Ask friends or family to handle specific rooms.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mistakes-list">
+            <h3>Common Mistakes Tenants Make</h3>
+            <ul>
+                <li>Leaving cleaning until moving day</li>
+                <li>Forgetting hidden areas like window tracks and skirting boards</li>
+                <li>Using harsh chemicals that damage surfaces</li>
+                <li>Ignoring outdoor spaces</li>
+                <li>Not keeping receipts for required services like carpet steam cleaning</li>
+            </ul>
+        </div>
+
+        <div class="conclusion">
+            <h2>Ready to Get Your Bond Back?</h2>
+            <p>Preparing for end of lease cleaning in Brisbane doesn't have to be stressful. With a clear plan, the right supplies, and some patience, you can tackle the job yourself and increase your chances of a full bond refund. Remember, the goal is simple: leave the property in the same clean and well-maintained condition as when you first moved in.</p>
+        </div>
+    </div>
+
+    <script>
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+        });
+
+        // Smooth scrolling animation for cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
